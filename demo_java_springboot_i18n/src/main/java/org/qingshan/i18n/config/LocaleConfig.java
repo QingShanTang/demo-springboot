@@ -19,6 +19,7 @@ public class LocaleConfig {
     public LocaleResolver localeResolver() {
         SessionLocaleResolver lr = new SessionLocaleResolver();
         lr.setDefaultLocale(Locale.US);//默认语言
+//        lr.setDefaultLocale(null);  //如果locale是null的话,根据用户浏览器语言使用文件
         return lr;
     }
 }
