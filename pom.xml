@@ -12,6 +12,7 @@
     <modules>
         <module>demo_java_springboot_async</module>
         <module>demo_java_springboot_schedule</module>
+        <module>demo_java_springboot_i18n</module>
     </modules>
 
     <properties>
