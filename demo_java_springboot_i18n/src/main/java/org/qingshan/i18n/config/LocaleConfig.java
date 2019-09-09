@@ -3,6 +3,8 @@ package org.qingshan.i18n.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import java.util.Locale;
@@ -22,4 +24,6 @@ public class LocaleConfig {
 //        lr.setDefaultLocale(null);  //如果locale是null的话,根据用户浏览器语言使用文件
         return lr;
     }
+
+
 }
