@@ -16,11 +16,13 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(getLocaleChangeInterceptor()).addPathPatterns("/hello");
     }
 
+    //使用自定义语言拦截器
     @Bean
     public LanguageInterceptor getLanguageInterceptor() {
         return new LanguageInterceptor();
     }
 
+    //使用spring自带语言拦截器
     @Bean
     public LocaleChangeInterceptor getLocaleChangeInterceptor() {
         LocaleChangeInterceptor lci = new LocaleChangeInterceptor();

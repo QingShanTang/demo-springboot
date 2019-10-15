@@ -16,6 +16,7 @@ public class LocaleConfig {
      * 默认解析器
      * springboot内部默认找这个bean。
      * 国际化文件使用策略:如果没有指定默认语言,则根据用户使用浏览器的语言使用国际化文件。
+     * 本质上国际化语言的控制是LocaleResolver bean中Locale的设置
      */
     @Bean
     public LocaleResolver localeResolver() {
