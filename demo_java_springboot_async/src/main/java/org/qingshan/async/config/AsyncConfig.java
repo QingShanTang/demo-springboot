@@ -3,9 +3,12 @@ package org.qingshan.async.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 
 import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -17,7 +20,8 @@ import java.util.concurrent.ThreadPoolExecutor;
         如果无法将任务加入BlockingQueue(queueCapacity)(队列已满)，则创建新的线程来处理任务（需要获得全局锁）
         如果创建新线程将使当前运行的线程超出maxiumPoolSize，任务将被拒绝，并调用RejectedExecutionHandler.rejectedExecution()方法*/
 
-//如果不配置Executor,那么默认是使用SimpleAsyncTaskExecutor,每次都重启一个新线程
+/*如果不配置Executor,会打印log-->No task executor bean found for async processing: no bean of type TaskExecutor and no bean named 'taskExecutor' either
+但是异步仍然会调用成功，因为之后会默认使用SimpleAsyncTaskExecutor,每次都重启一个新线程*/
 @Configuration
 @EnableAsync
 public class AsyncConfig {
@@ -31,8 +35,7 @@ public class AsyncConfig {
     private int keepAliveSeconds = 60;
     //    拒绝策略
     private RejectedExecutionHandler handler = new ThreadPoolExecutor.CallerRunsPolicy();
-
-
+    
     @Bean
     public Executor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
