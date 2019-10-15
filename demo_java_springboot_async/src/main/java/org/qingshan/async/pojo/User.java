@@ -11,11 +11,13 @@ public class User implements Serializable {
     private String id;
     private Integer age;
     private Date birthday;
+    private String threadName;
 
-    public User(String id, Integer age, Date birthday) {
+    public User(String id, Integer age, Date birthday, String threadName) {
         this.id = id;
         this.age = age;
         this.birthday = birthday;
+        this.threadName = threadName;
     }
 
     public User() {

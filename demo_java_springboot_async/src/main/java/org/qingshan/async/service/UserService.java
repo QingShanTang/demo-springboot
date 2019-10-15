@@ -16,13 +16,21 @@ import java.util.concurrent.Future;
 public class UserService {
 
     @Async
-    public void printUser(User user) {
+    public void printUser(User user) throws InterruptedException {
+        log.info("异步开启。。。");
+        Thread.sleep(5 * 1000);
+        user.setThreadName(Thread.currentThread().getName());
         log.info("user:" + user);
+        log.info("异步结束。。。");
     }
 
     @Async
-    public Future<User> printUserReturn(User user) {
+    public Future<User> printUserReturn(User user) throws InterruptedException {
+        log.info("异步开启。。。");
+        Thread.sleep(5 * 1000);
+        user.setThreadName(Thread.currentThread().getName());
         log.info("user:" + user);
+        log.info("异步结束。。。");
         return new AsyncResult<>(user);
     }
 
