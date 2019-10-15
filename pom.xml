@@ -13,6 +13,7 @@
         <module>demo_java_springboot_async</module>
         <module>demo_java_springboot_schedule</module>
         <module>demo_java_springboot_i18n</module>
+        <module>demo_java_springboot_mybatis</module>
     </modules>
 
     <properties>
