@@ -22,10 +22,10 @@ public abstract class DefaultJob {
     }
 
     public void init() {
-        log.debug("job init time:" + new Date());
+        log.info(this.getClass().getSimpleName() + " job init time:" + new Date());
     }
 
     protected void ending() {
-        log.debug("job ending time:" + new Date());
+        log.info(this.getClass().getSimpleName() + " job ending time:" + new Date());
     }
 }

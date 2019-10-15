@@ -24,13 +24,13 @@ public class TaskService {
     public void runJob1() {
         log.info(">>>>Start run schedule --> job1<<<<");
         job1.runJob(scheduledProps.getEnabled(), scheduledProps.getJob1Enabled());
-        log.info(">>>>End run schedule job1<<<<");
+        log.info(">>>>End run schedule --> job1<<<<");
     }
 
     @Scheduled(cron = "${scheduled.job2Timer}")
     public void runJob2() {
         log.info(">>>>Start run schedule --> job2<<<<");
         job2.runJob(scheduledProps.getEnabled(), scheduledProps.getJob2Enabled());
-        log.info(">>>>End run schedule job2<<<<");
+        log.info(">>>>End run schedule --> job2<<<<");
     }
 }
