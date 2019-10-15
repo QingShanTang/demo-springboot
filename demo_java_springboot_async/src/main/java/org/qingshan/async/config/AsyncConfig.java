@@ -35,7 +35,7 @@ public class AsyncConfig {
     private int keepAliveSeconds = 60;
     //    拒绝策略
     private RejectedExecutionHandler handler = new ThreadPoolExecutor.CallerRunsPolicy();
-    
+
     @Bean
     public Executor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
