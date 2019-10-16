@@ -1,6 +1,8 @@
 package org.qingshan.mybatis.mapper;
 
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.qingshan.mybatis.pojo.Student;
 import org.qingshan.mybatis.pojo.StudentExample;
 

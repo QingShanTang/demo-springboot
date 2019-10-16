@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.qingshan.mybatis.dao.StudentDao">
+
+    <select id="pagingStudent"
+            parameterType="org.qingshan.mybatis.dto.StudentPagingParam"
+            resultType="org.qingshan.mybatis.dto.StudentPagingResult">
+        SELECT
+        *
+        FROM tbl_student as stu
+        WHERE 1=1
+        <if test="null != name and name != ''">
+            AND stu.name like concat('%',#{name},'%')
+        </if>
+    </select>
+    
+</mapper>

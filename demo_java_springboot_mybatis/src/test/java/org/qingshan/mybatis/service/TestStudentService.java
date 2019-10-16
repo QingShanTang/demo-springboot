@@ -13,8 +13,14 @@ public class TestStudentService {
     @Autowired
     private StudentService studentService;
 
+
     @Test
-    public void TestStudentService(){
+    public void TestFindStudent(){
         studentService.findStudent();
+    }
+
+    @Test
+    public void TestListStudent(){
+        System.out.println(studentService.listStudent());
     }
 }
