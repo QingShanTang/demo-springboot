@@ -14,6 +14,8 @@
         <module>demo_java_springboot_schedule</module>
         <module>demo_java_springboot_i18n</module>
         <module>demo_java_springboot_mybatis</module>
+        <module>demo_java_springboot_redis</module>
+        <module>demo_java_springboot_mongodb</module>
     </modules>
 
     <properties>

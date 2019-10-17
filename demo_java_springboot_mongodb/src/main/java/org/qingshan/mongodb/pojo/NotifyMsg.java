@@ -13,7 +13,7 @@ public class NotifyMsg {
     @Id
     private String id;
 
-    @Field("notify_type")  //@Field相当于字段属性映射
+    @Field("notify_type")  //@Field相当于字段属性映射,一定要严格保证映射正确
     private String notifyType;
 
     @Field("notify_no")
