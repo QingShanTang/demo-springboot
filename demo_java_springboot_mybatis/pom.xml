@@ -75,6 +75,14 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.8.1</version>
         </dependency>
+
+
+        //jasypt配置文件密码解密
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>1.14</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -91,5 +99,5 @@
             </plugin>
         </plugins>
     </build>
-    
+
 </project>
